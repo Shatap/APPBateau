@@ -12,8 +12,8 @@
 
 /*
  * retourne une adresse de socket IPv4
- * pour une machine et un service donnés
- * Le service peut-être un nom "ftp" ou une chaine numérique "5678"
+ * pour une machine et un service donné
+ * Le service peut être un nom "ftp" ou une chaine numérique "5678"
  * Levée d'exception si introuvable.
  */
 

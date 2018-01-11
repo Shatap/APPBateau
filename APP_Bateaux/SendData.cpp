@@ -5,12 +5,6 @@ using namespace std;
 SendData::SendData(int id, int x, int y, int speed, std::string name, Heading heading)
     : m_id{id}, m_x{x}, m_y{y}, m_speed{speed}, m_name{name}, m_heading{heading}
 {}
-/*
-SendData::SendData(const SendData &data) : SendData(data.getId(), data.getX(), data.getY(), data.getSpeed(), data.getName(), data.getHeading())
-{
-}*/
-
-
 
 int SendData::getId() const
 {

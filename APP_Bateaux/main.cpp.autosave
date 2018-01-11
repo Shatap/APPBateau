@@ -39,7 +39,7 @@ int main()
     char* serviceClient = (char*)"1997";
 
     Beacon Marc("Trenaudon", 0, 10, 10, 20, NORTH, (char*)"localhost", serviceBeacon);
-    Beacon Pan("Joliax", 1, 20, 20, 20, SOUTH, (char*)"localhost", serviceBeacon);
+    Beacon Pan("Joliax", 1, 20, 20, 20, NORTH_EAST, (char*)"localhost", serviceBeacon);
 
     vector<thread> vectorThreads;
     vector<Beacon> vectorBeacon{Marc,Pan};

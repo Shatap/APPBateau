@@ -1,5 +1,5 @@
-#ifndef TESTSERVER_H
-#define TESTSERVER_H
+#ifndef SERVER_H
+#define SERVER_H
 
 #include "make-sockaddr.h"
 #include "SendData.h"
@@ -11,15 +11,15 @@
 
 const int MAX_DATA = 10;
 
-class TestServer
+class Server
 {
 private:
     char* m_serviceBeacon, *m_serviceClient;
     void addData(SendData data);
 public:
-    TestServer(char* service_beacon, char* service_client);
+    Server(char* service_beacon, char* service_client);
     void listenClient();
     void listenBeacon();
 };
 
-#endif // TESTSERVER_H
+#endif // SERVER_H

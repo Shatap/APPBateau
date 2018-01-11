@@ -1,10 +1,11 @@
 #include "Beacon.h"
 
 Beacon::Beacon(std::string name, int id, int x, int y, int speed, Heading heading, char* hostname, char* service) :
-    m_hostname{hostname}, m_service{service}, m_id{id}, m_x{x}, m_y{y}, m_speed{speed}, m_heading{heading}, m_name{name}
+    m_name{name}, m_id{id}, m_x{x}, m_y{y}, m_speed{speed}, m_heading{heading},m_hostname{hostname}, m_service{service}
 {
 }
 
+/* Actualisation de la position en fonction de l'orientation et de la vitesse */
 void Beacon::update()
 {
     switch(m_heading)
@@ -40,6 +41,7 @@ void Beacon::update()
     }
 }
 
+//envoie des données au serveur via Protocole UDP
 void Beacon::sendToServer()
 {
     auto server_address = remote_socket_address(m_hostname, SOCK_DGRAM, m_service);
@@ -52,13 +54,10 @@ void Beacon::sendToServer()
                       (sockaddr *)&server_address, sizeof server_address);
 
     if(size == sizeof data)
-    {
         std::cout << "Data sent !" << std::endl;
-    }
     else
-    {
         std::cout << "Data not sent..." << std::endl;
-    }
+
 
     close(fd);
 }

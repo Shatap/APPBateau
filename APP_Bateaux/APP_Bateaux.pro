@@ -13,8 +13,8 @@ SOURCES += \
     Beacon.cpp \
     make-sockaddr.cpp \
     main.cpp \
-    TestServer.cpp \
-    Client.cpp
+    Client.cpp \
+    Server.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -24,6 +24,6 @@ HEADERS += \
     Beacon.h \
     make-sockaddr.h \
     Heading.h \
-    TestServer.h \
-    Client.h
+    Client.h \
+    Server.h
 
